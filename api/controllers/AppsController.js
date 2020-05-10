@@ -18,6 +18,10 @@ module.exports = {
         }
         let destroyedApps = await Apps.destroy({tag: tag}).fetch()
         return res.ok(destroyedApps)
+    },
+    listTag: async (req, res) => {
+        var result = await sails.sendNativeQuery("SELECT tag FROM apps GROUP BY tag")
+        return res.ok(result.rows)
     }
 };
 
