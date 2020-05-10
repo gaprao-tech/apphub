@@ -6,7 +6,10 @@
  */
 
 module.exports = {
-  
-
+    total: async (req, res) => {
+        let tag = req.query.tag
+        let total = await Apps.find({tag: tag})
+        return res.ok({total: total})
+    },
 };
 
