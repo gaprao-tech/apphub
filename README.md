@@ -1,6 +1,10 @@
 # apphub
 
-a [Sails v1](https://sailsjs.com) application
+[Sails v1](https://sailsjs.com) application
+
+### Sails Command
+
+- `sails generate api <model-name>`
 
 
 ### Links
