@@ -11,5 +11,13 @@ module.exports = {
         let total = await Apps.find({tag: tag})
         return res.ok({total: total})
     },
+    deleteTag: async (req, res) => {
+        let tag = req.body.tag
+        if (!tag) {
+            return res.badRequest()
+        }
+        let destroyedApps = await Apps.destroy({tag: tag}).fetch()
+        return res.ok(destroyedApps)
+    }
 };
 

@@ -10,4 +10,5 @@
 
 module.exports.routes = {
     'GET /apps/total': {controller: 'Apps', action: 'total'},
+    'DELETE /apps/deltag': {controller: 'Apps', action: 'deleteTag'},
 };
